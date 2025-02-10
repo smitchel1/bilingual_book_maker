@@ -225,6 +225,10 @@ bbook --book_name test_books/animal_farm.epub --openai_key ${openai_key} --test
 **Note if use `pip install bbook_maker` all commands can change to `bbook_maker args`**
 
 ```shell
+
+# Translate using Llama.cpp
+python3 make_book.py --book_name test_books/animal_farm.epub --model llama_cpp --language fr --prompt "Translate the given text to {language}. Be faithful or accurate in translation. Make the translation readable or intelligible. Be elegant or natural in translation. If the text cannot be translated, return the original text as is. Do not translate person's name. Do not add any additional text in the translation. The text to be translated is:\n{text}"
+
 # Test quickly
 python3 make_book.py --book_name test_books/animal_farm.epub --openai_key ${openai_key}  --test --language zh-hans
 
